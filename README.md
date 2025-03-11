@@ -46,7 +46,7 @@
 - **CSS animations** enhance the user experience with hover and text gradient effects.
 
 ## Screenshots
-![Preview of the grid layout](/screenshot-page.jpg)
+![Preview of the grid layout](/screenshot-preview.jpg)
 
 ## Contributing
 Contributions are welcome! If you find a bug or have an improvement suggestion:
