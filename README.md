@@ -11,9 +11,6 @@
 - ✨ **Smooth Hover Effects** – Enhances UI experience.
 
 ## Installation & Usage
-### Live Demo:
-[Visit Demo](https://your-demo-url.com) *(Replace with actual URL if deployed)*
-
 ### Local Setup:
 1. Clone the repository:
    ```sh
