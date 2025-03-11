@@ -1,4 +1,4 @@
-// Function to generate all 255 shades of gray with hex codes and copy functionality
+// Function to generate all 256 shades of gray with hex codes and copy functionality
 function generateGrayShades() {
     const gridContainer = document.getElementById("grid-container");
 
