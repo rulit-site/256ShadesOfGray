@@ -1,82 +1,128 @@
+/* Main styles for body */
 body {
-    display: flex;
-    flex-flow: column wrap;
-    /* flex-direction: column; */
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-    background-color: #f0f0f0; /* Background color for the page*/ 
-}
-
-h1 {
   display: flex;
+  flex-flow: column wrap;
   justify-content: center;
-    align-items: center;
-  text-align: center;
-  /* transform:  translateX(-50%) translateY(-50%) rotate(-90deg); */
-  margin: 8px 8px;
-  height: 90px;
+  align-items: center;
+  margin: 10px;
+  background-color: #f0f0f0; /* Background color for the page */ 
+  font-family: Arial, sans-serif;
 }
 
+/* Title h1 */
+h1 {
+  text-align: center;
+  margin: 20px 10px;
+  font-size: 28px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Description */
 p {
   margin: 15px;
   text-align: center;
+  font-size: 16px;
 }
 
+/* Container for grayscale shades */
 .grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-    padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  padding: 10px;
 }
 
-@media (min-width: 414px) {
-    .grid  { grid-template-columns: repeat(3, 1fr); }
+/* Color card */
+.color-box {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: normal;
+  cursor: pointer;
+  background-color: #808080;
+  color: #ffffff; 
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-align: center;
+  z-index: 2;
+}
+
+/* Hover animation */
+.color-box:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Copy button */
+.copy-button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: green;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Hover effect for the button */
+.copy-button:hover {
+  background-color: darkgreen;
+}
+
+/* Footer styles */
+.footer {
+  margin: 20px auto;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Gradient animated text */
+.text-gradient {
+  animation: textGradient 5s linear infinite;
+  font-size: 16px !important;
+}
+
+/* Animate text */
+@keyframes textGradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  } 
+}
+
+.text-gradient {
+  background: linear-gradient(-45deg,#43eacc,#ff7f30,#ff6e82 50%,#e9c98f,#ff6e82 0,#17bd9a,#4d9724);
+  background-size: 300% 300%;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textGradient 5s linear infinite;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 600px) {
+  .grid {
+      grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (min-width: 768px) {
-    .grid  { grid-template-columns: repeat(6, 1fr); }
-}
-
-@media (min-width: 900px) {
-    .grid  { grid-template-columns: repeat(13, 1fr); }
+  .grid {
+      grid-template-columns: repeat(6, 1fr);
+  }
 }
 
 @media (min-width: 1024px) {
-    .grid  { grid-template-columns: repeat(8, 1fr); }
-}
-
-@media (min-width: 1025px) {
-  .grid  { grid-template-columns: repeat(13, 1fr); }
-}
-
-.color-box {
-    width: 100px;
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    background-color: #808080; /* Default background color for color boxes */
-    color: #ffffff; /* Default text color for hex code */
-    transition: color 0.3s; /* Smooth transition for text color change */
-    text-align: center; /* Center-align text */
-    z-index: 2;
-}
-
-.copy-button {
-    margin-top: 10px;
-    padding: 8px 16px;
-    background-color: green;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.footer {
-  margin: 15px auto;
+  .grid {
+      grid-template-columns: repeat(13, 1fr);
+  }
 }
