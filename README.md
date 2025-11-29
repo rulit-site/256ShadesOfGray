@@ -60,5 +60,5 @@ Contributions are welcome! If you find a bug or have an improvement suggestion:
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Author
-Developed by [Rulit.site](https://rulit.site) 🚀.
+Developed by [Volhan](https://volhan.com) 🚀.
 
